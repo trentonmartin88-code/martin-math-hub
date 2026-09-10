@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#68162f">
+<title>Practice | Martin Math Hub</title>
+<style>
+:root{--maroon:#68162f;--dark:#4b0f22;--gold:#d6aa36;--goldsoft:#f4e2ad;--ivory:#fffaf0;--cream:#f7f1e7;--white:#fff;--ink:#272124;--muted:#6d6468;--line:#e9dfcf;--good:#1f7a4d;--bad:#a22a2a;--shadow:0 12px 30px rgba(63,24,36,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 92% 4%,rgba(214,170,54,.14),transparent 24%),linear-gradient(180deg,var(--ivory),#fff 30%,#fff 82%,var(--cream))}
+.container{width:min(1040px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(255,250,240,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--dark)}.mark{width:38px;height:38px;border-radius:12px;background:var(--maroon);color:var(--goldsoft);display:grid;place-items:center}.back{padding:9px 12px;border-radius:999px;background:var(--cream);text-decoration:none;font-weight:800;font-size:13px;color:var(--dark)}
+.hero{padding:28px 0 10px}.heroCard{position:relative;overflow:hidden;border-radius:28px;padding:31px;background:linear-gradient(135deg,var(--dark),var(--maroon));color:#fff;box-shadow:var(--shadow)}.heroCard:after{content:"✓ ? ✓ ? ✓";position:absolute;right:-6px;top:14px;font-size:52px;font-weight:950;opacity:.07;transform:rotate(-6deg);white-space:nowrap}.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldsoft)}h1{font-size:clamp(32px,6vw,50px);line-height:1;margin:8px 0 10px}.hero p{max-width:760px;margin:0;color:#fff8ef;line-height:1.55}
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}.jump a{text-decoration:none;font-size:12px;font-weight:900;padding:9px 11px;border-radius:999px;background:var(--cream);color:var(--dark);border:1px solid var(--line)}
+.section{padding:18px 0 3px;scroll-margin-top:80px}.section h2{margin:0 0 7px;color:var(--dark);font-size:clamp(24px,4vw,31px)}.intro{margin:0 0 13px;color:var(--muted);font-size:14px;line-height:1.55}
+.panel{background:#fff;border:1px solid var(--line);border-radius:21px;padding:21px;box-shadow:0 7px 20px rgba(63,24,36,.07)}.notice{background:linear-gradient(135deg,#fff1c6,var(--ivory));border:1px solid #ead59d;border-radius:18px;padding:17px;margin-bottom:12px}.notice b{color:var(--maroon)}.notice p{margin:4px 0 0;color:var(--dark);font-size:14px;line-height:1.5}
+.qList{display:grid;gap:10px}.question{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--ivory)}.qnum{font-weight:950;color:var(--maroon);font-size:12px;letter-spacing:.7px;text-transform:uppercase;margin-bottom:4px}.question p{margin:0;color:var(--dark);font-size:15px;line-height:1.5}.answerLine{margin-top:9px;color:var(--muted);font-size:13px}.answerLine span{display:inline-block;min-width:170px;border-bottom:2px solid #d9cdbd;height:20px}
+details{margin-top:12px;border:1px solid var(--line);border-radius:15px;background:#fff;padding:0 14px}summary{cursor:pointer;list-style:none;padding:13px 0;font-weight:900;color:var(--maroon)}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;font-size:20px}details[open] summary:after{content:"–"}.answers{padding:0 0 14px;color:var(--muted);font-size:13px;line-height:1.6}
+.digitalGrid{display:grid;gap:11px}.digitalQ{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:14px}.digitalQ p{margin:0 0 9px;font-weight:800;line-height:1.45}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.choice{display:flex;gap:7px;align-items:center;padding:8px 9px;background:#fff;border:1px solid var(--line);border-radius:11px;font-size:13px;color:var(--muted)}.choice input{accent-color:var(--maroon)}
+.feedback{margin-top:7px;font-size:12px;font-weight:800;min-height:16px}.correct{color:var(--good)}.incorrect{color:var(--bad)}.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.button{border:0;border-radius:13px;padding:11px 14px;font-weight:900;cursor:pointer;background:var(--maroon);color:#fff}.button.alt{background:var(--goldsoft);color:var(--dark)}.score{margin-top:13px;padding:13px;border-radius:14px;background:var(--cream);font-weight:900;color:var(--dark);display:none}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.skillCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px}.skillCard h3{margin:0 0 6px;color:var(--dark)}.skillCard p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}.footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 0 40px}.footer b{color:var(--dark)}
+@media(max-width:760px){.grid2,.choices{grid-template-columns:1fr}.heroCard{padding:24px 20px}.nav{padding:8px 0}.back{white-space:nowrap}}
+@media print{.top,.hero,.jump,.controls,#digital,.footer{display:none!important}body{background:#fff}.panel{box-shadow:none;border:0;padding:0}.section{padding:8px 0}.container{width:100%;max-width:none}details{display:none}.question{break-inside:avoid;background:#fff}}
+</style>
+</head>
+<body>
+<header class="top"><div class="container nav"><a class="brand" href="index.html"><span class="mark">M</span><span>Martin Math Hub</span></a><a class="back" href="topic2.html">← Topic 2 Notes</a></div></header>
+<main>
+<section class="hero"><div class="container"><div class="heroCard"><div class="eyebrow">Topic 2 • Practice Center</div><h1>Practice & Review</h1><p>Practice the current skill, stretch your thinking, spiral back to earlier skills, or use the built-in digital self-check.</p></div><div class="jump"><a href="#current">Current Practice</a><a href="#digital">Digital Self-Check</a><a href="#extra">Extra Practice</a><a href="#spiral">Spiral Review</a><a href="videohelp.html">Video Help</a></div></div></section>
+
+<section class="section" id="current"><div class="container"><h2>Current Topic Practice</h2><p class="intro">Rational numbers, integers, absolute value, and the coordinate plane.</p><div class="panel">
+<div class="notice"><b>Student directions:</b><p>Show or explain your thinking. Use a number line, words, or another model when it helps.</p></div>
+<div class="qList">
+<div class="question"><div class="qnum">1</div><p>A submarine is 85 feet below sea level. Write an integer to represent its position.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">2</div><p>Which is greater: −4 or −11? Explain how you know using a number line idea.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">3</div><p>Order these values from least to greatest: 6, −3, 0, −8, 2.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">4</div><p>Find |−14| and explain what the answer means.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">5</div><p>A temperature changes from 3°F to −5°F. Which temperature is colder, and how far is each value from zero?</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">6</div><p>Give the opposite of −9. Then explain what makes the two numbers opposites.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">7</div><p>Point A is (−4, 5). In which quadrant is Point A?</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">8</div><p>Point B is (3, −6). Reflect Point B across the y-axis. What are the coordinates of the new point?</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">9</div><p>Which value is farther from zero: −12 or 9? Justify your answer with absolute value.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">10</div><p>A football team has a gain of 8 yards and then a loss of 13 yards. Which number represents the loss? Explain the sign.</p><div class="answerLine">Answer: <span></span></div></div>
+</div>
+<details><summary>Check answers after you finish</summary><div class="answers">1. −85<br>2. −4; it is farther right on a number line.<br>3. −8, −3, 0, 2, 6<br>4. 14; −14 is 14 units from zero.<br>5. −5°F is colder; 3 is 3 units from zero and −5 is 5 units from zero.<br>6. 9; −9 and 9 are the same distance from zero on opposite sides.<br>7. Quadrant II<br>8. (−3, −6)<br>9. −12 because |−12| = 12 and |9| = 9.<br>10. −13; the negative sign represents movement in the losing direction.</div></details>
+<div class="controls"><button class="button" onclick="window.print()">🖨️ Print Current + Extra + Spiral</button></div>
+</div></div></section>
+
+<section class="section" id="digital"><div class="container"><h2>Digital Self-Check</h2><p class="intro">No login. No submission. Students can check their own understanding immediately.</p><div class="panel">
+<div class="digitalGrid" id="quiz">
+<div class="digitalQ" data-answer="b"><p>1. Which integer represents 7 feet below sea level?</p><div class="choices"><label class="choice"><input type="radio" name="q1" value="a"> +7</label><label class="choice"><input type="radio" name="q1" value="b"> −7</label><label class="choice"><input type="radio" name="q1" value="c"> 0</label><label class="choice"><input type="radio" name="q1" value="d"> 7.7</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="c"><p>2. Which number is greatest?</p><div class="choices"><label class="choice"><input type="radio" name="q2" value="a"> −9</label><label class="choice"><input type="radio" name="q2" value="b"> −4</label><label class="choice"><input type="radio" name="q2" value="c"> 2</label><label class="choice"><input type="radio" name="q2" value="d"> −1</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="d"><p>3. What is |−15|?</p><div class="choices"><label class="choice"><input type="radio" name="q3" value="a"> −15</label><label class="choice"><input type="radio" name="q3" value="b"> 0</label><label class="choice"><input type="radio" name="q3" value="c"> −1</label><label class="choice"><input type="radio" name="q3" value="d"> 15</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="a"><p>4. Which pair contains opposites?</p><div class="choices"><label class="choice"><input type="radio" name="q4" value="a"> −6 and 6</label><label class="choice"><input type="radio" name="q4" value="b"> −6 and −6</label><label class="choice"><input type="radio" name="q4" value="c"> 0 and 6</label><label class="choice"><input type="radio" name="q4" value="d"> 6 and 12</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="b"><p>5. In which quadrant is (−3, 8)?</p><div class="choices"><label class="choice"><input type="radio" name="q5" value="a"> I</label><label class="choice"><input type="radio" name="q5" value="b"> II</label><label class="choice"><input type="radio" name="q5" value="c"> III</label><label class="choice"><input type="radio" name="q5" value="d"> IV</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="d"><p>6. Which statement is true?</p><div class="choices"><label class="choice"><input type="radio" name="q6" value="a"> −8 &gt; −2</label><label class="choice"><input type="radio" name="q6" value="b"> −3 &gt; 0</label><label class="choice"><input type="radio" name="q6" value="c"> 0 &lt; −5</label><label class="choice"><input type="radio" name="q6" value="d"> −2 &gt; −8</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="c"><p>7. Which value is farthest from zero?</p><div class="choices"><label class="choice"><input type="radio" name="q7" value="a"> 7</label><label class="choice"><input type="radio" name="q7" value="b"> −8</label><label class="choice"><input type="radio" name="q7" value="c"> −11</label><label class="choice"><input type="radio" name="q7" value="d"> 10</label></div><div class="feedback"></div></div>
+<div class="digitalQ" data-answer="a"><p>8. Reflect (5, −4) across the y-axis.</p><div class="choices"><label class="choice"><input type="radio" name="q8" value="a"> (−5, −4)</label><label class="choice"><input type="radio" name="q8" value="b"> (5, 4)</label><label class="choice"><input type="radio" name="q8" value="c"> (−5, 4)</label><label class="choice"><input type="radio" name="q8" value="d"> (4, −5)</label></div><div class="feedback"></div></div>
+</div>
+<div class="controls"><button class="button" onclick="checkQuiz()">Check My Answers</button><button class="button alt" onclick="resetQuiz()">Try Again</button></div><div class="score" id="score"></div>
+</div></div></section>
+
+<section class="section" id="extra"><div class="container"><h2>Extra Practice</h2><p class="intro">A little more reasoning for students ready to stretch.</p><div class="panel"><div class="qList">
+<div class="question"><div class="qnum">1</div><p>Two numbers are opposites and are 17 units apart. What are the two numbers? Explain.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">2</div><p>Jordan says −20 is greater than −5 because 20 is greater than 5. Explain Jordan's error.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">3</div><p>A point has a negative x-coordinate and a positive y-coordinate. Which quadrant must it be in? Explain.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">4</div><p>Write a real-world situation in which −24 and +24 would represent opposite quantities.</p><div class="answerLine">Answer: <span></span></div></div>
+<div class="question"><div class="qnum">5</div><p>Which is farther from zero: −13.5 or 12.9? Explain using absolute value.</p><div class="answerLine">Answer: <span></span></div></div>
+</div><details><summary>Check possible answers</summary><div class="answers">1. −8.5 and 8.5; each is 8.5 units from zero and they are 17 units apart.<br>2. On a number line −20 is farther left, so −20 &lt; −5.<br>3. Quadrant II.<br>4. Answers vary; for example, $24 deposited and $24 withdrawn.<br>5. −13.5 because |−13.5| = 13.5 and |12.9| = 12.9.</div></details></div></div></section>
+
+<section class="section" id="spiral"><div class="container"><h2>Spiral Review</h2><p class="intro">Earlier skills stay in the mix.</p><div class="grid2">
+<div class="skillCard"><h3>Decimal Operations</h3><p>1. 14.6 + 8.75 = ?<br>2. 32.4 − 7.86 = ?<br>3. 4.8 × 2.5 = ?<br>4. 18.9 ÷ 3 = ?</p></div>
+<div class="skillCard"><h3>Fraction Division</h3><p>5. 3/4 ÷ 1/2 = ?<br>6. 2 1/3 ÷ 2/3 = ?<br>7. 5/6 ÷ 5/12 = ?<br>8. A 3-cup container is filled using a 3/8-cup scoop. How many scoops are needed?</p></div>
+</div><details><summary>Spiral review answers</summary><div class="answers">1. 23.35<br>2. 24.54<br>3. 12<br>4. 6.3<br>5. 1 1/2<br>6. 3 1/2<br>7. 2<br>8. 8 scoops</div></details></div></section>
+</main>
+<footer class="footer"><div class="container"><b>Martin Math Hub</b><br>Practice Center • Topic 2</div></footer>
+<script>
+function checkQuiz(){
+  let correct=0,total=0;
+  document.querySelectorAll('.digitalQ').forEach((q,i)=>{
+    total++;
+    const chosen=q.querySelector('input[type="radio"]:checked');
+    const fb=q.querySelector('.feedback');
+    if(!chosen){fb.textContent='Choose an answer.';fb.className='feedback incorrect';return}
+    if(chosen.value===q.dataset.answer){correct++;fb.textContent='✓ Correct';fb.className='feedback correct'}
+    else{fb.textContent='✗ Try this one again.';fb.className='feedback incorrect'}
+  });
+  const score=document.getElementById('score');
+  score.style.display='block';
+  score.textContent=`You got ${correct} out of ${total} correct. ${correct===total?'Excellent work!':'Review the ones marked “try again,” then check once more.'}`;
+}
+function resetQuiz(){
+  document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('.feedback').forEach(x=>{x.textContent='';x.className='feedback'});
+  document.getElementById('score').style.display='none';
+}
+</script>
+</body>
+</html>
