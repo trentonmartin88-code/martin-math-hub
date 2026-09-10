@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#68162f">
+<title>Topics Library | Martin Math Hub</title>
+<style>
+:root{--maroon:#68162f;--dark:#4b0f22;--gold:#d6aa36;--goldsoft:#f4e2ad;--ivory:#fffaf0;--cream:#f7f1e7;--white:#fff;--ink:#272124;--muted:#6d6468;--line:#e9dfcf;--shadow:0 12px 30px rgba(63,24,36,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 92% 4%,rgba(214,170,54,.14),transparent 24%),linear-gradient(180deg,var(--ivory),#fff 30%,#fff 82%,var(--cream))}
+.container{width:min(1040px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(255,250,240,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--dark)}.mark{width:38px;height:38px;border-radius:12px;background:var(--maroon);color:var(--goldsoft);display:grid;place-items:center}.back{padding:9px 12px;border-radius:999px;background:var(--cream);text-decoration:none;font-weight:800;font-size:13px;color:var(--dark)}
+.hero{padding:28px 0 10px}.heroCard{position:relative;overflow:hidden;border-radius:28px;padding:31px;background:linear-gradient(135deg,var(--dark),var(--maroon));color:#fff;box-shadow:var(--shadow)}.heroCard:after{content:"1  2  3  4  5";position:absolute;right:0;top:10px;font-size:54px;font-weight:950;opacity:.07;transform:rotate(-6deg);white-space:nowrap}.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldsoft)}h1{font-size:clamp(32px,6vw,50px);line-height:1;margin:8px 0 10px}.hero p{max-width:760px;margin:0;color:#fff8ef;line-height:1.55}
+.section{padding:18px 0 3px}.section h2{margin:0 0 7px;color:var(--dark);font-size:clamp(24px,4vw,31px)}.intro{margin:0 0 13px;color:var(--muted);font-size:14px;line-height:1.55}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.topic{background:#fff;border:1px solid var(--line);border-radius:21px;padding:20px;box-shadow:0 7px 20px rgba(63,24,36,.07);position:relative;overflow:hidden}.topic.current{border:2px solid var(--gold);background:linear-gradient(135deg,#fffdf8,#fff8e6)}.badge{display:inline-block;padding:6px 9px;border-radius:999px;background:var(--cream);color:var(--maroon);font-size:11px;font-weight:950;letter-spacing:.8px;text-transform:uppercase}.current .badge{background:var(--goldsoft);color:var(--dark)}.topic h3{margin:10px 0 7px;color:var(--dark);font-size:21px}.topic p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.links a{display:inline-flex;text-decoration:none;padding:9px 11px;border-radius:12px;background:var(--maroon);color:#fff;font-weight:900;font-size:12px}.links a.alt{background:var(--goldsoft);color:var(--dark)}.disabled{display:inline-flex;padding:9px 11px;border-radius:12px;background:var(--cream);color:var(--muted);font-weight:800;font-size:12px;border:1px solid var(--line)}
+.note{margin-top:14px;background:linear-gradient(135deg,#fff1c6,var(--ivory));border:1px solid #ead59d;border-radius:18px;padding:18px}.note b{display:block;color:var(--maroon);margin-bottom:5px}.note p{margin:0;color:var(--dark);font-size:14px;line-height:1.5}.footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 0 40px}.footer b{color:var(--dark)}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.heroCard{padding:24px 20px}.nav{padding:8px 0}.back{white-space:nowrap}}
+</style>
+</head>
+<body>
+<header class="top"><div class="container nav"><a class="brand" href="index.html"><span class="mark">M</span><span>Martin Math Hub</span></a><a class="back" href="index.html">← Back to Hub</a></div></header>
+<main>
+<section class="hero"><div class="container"><div class="heroCard"><div class="eyebrow">6th Grade Mathematics • 2026–2027</div><h1>Topics Library</h1><p>Your yearlong collection of notes, anchor charts, worked examples, vocabulary, practice, and extra help.</p></div></div></section>
+
+<section class="section"><div class="container"><h2>Math Topics</h2><p class="intro">The current topic stays highlighted. Completed topics remain available for review as the year moves forward.</p>
+<div class="grid">
+  <article class="topic">
+    <span class="badge">Previous Topic</span>
+    <h3>Topic 1</h3>
+    <p>Topic 1 resources will be archived here once we finish organizing the materials we want students to keep using.</p>
+    <div class="links"><span class="disabled">Archive Coming Soon</span></div>
+  </article>
+
+  <article class="topic current">
+    <span class="badge">Current Topic</span>
+    <h3>Topic 2: Rational Numbers & Integers</h3>
+    <p>Positive and negative numbers, number lines, absolute value, opposites, ordered pairs, and the coordinate plane.</p>
+    <div class="links">
+      <a href="topic2.html">📖 Notes</a>
+      <a class="alt" href="topic2.html#anchor-charts">🧠 Anchor Charts</a>
+      <a href="practice.html#current">✏️ Practice</a>
+      <a class="alt" href="videohelp.html">🎥 Video Help</a>
+    </div>
+  </article>
+
+  <article class="topic">
+    <span class="badge">Coming Later</span>
+    <h3>Topic 3</h3>
+    <p>This topic will appear here when instruction begins. The library grows with us throughout the year.</p>
+    <div class="links"><span class="disabled">Not Open Yet</span></div>
+  </article>
+
+  <article class="topic">
+    <span class="badge">Yearlong Review</span>
+    <h3>Spiral Practice</h3>
+    <p>Keep earlier skills fresh while learning new material. Current spiral review includes decimal operations and fraction division.</p>
+    <div class="links"><a href="practice.html#spiral">🔄 Open Spiral Review</a></div>
+  </article>
+</div>
+
+<div class="note"><b>Why keep old topics?</b><p>Math builds on itself. Students can come back here before assessments, when a new lesson uses an older skill, or anytime they need a reminder.</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="container"><b>Martin Math Hub</b><br>Topics Library • 6th Grade Mathematics</div></footer>
+</body>
+</html>
