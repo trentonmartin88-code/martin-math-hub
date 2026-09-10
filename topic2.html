@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#68162f">
+<title>Topic 2: Rational Numbers & Integers | Martin Math Hub</title>
+<style>
+:root{
+  --maroon:#68162f;--dark:#4b0f22;--gold:#d6aa36;--goldsoft:#f4e2ad;
+  --ivory:#fffaf0;--cream:#f7f1e7;--white:#fff;--ink:#272124;--muted:#6d6468;
+  --line:#e9dfcf;--shadow:0 12px 30px rgba(63,24,36,.12);--radius:22px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 92% 4%,rgba(214,170,54,.15),transparent 24%),
+  linear-gradient(180deg,var(--ivory),#fff 34%,#fff 82%,var(--cream))
+}
+.container{width:min(1040px,calc(100% - 28px));margin:auto}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,250,240,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--dark)}
+.mark{width:38px;height:38px;border-radius:12px;background:var(--maroon);color:var(--goldsoft);display:grid;place-items:center}
+.back{padding:9px 12px;border-radius:999px;background:var(--cream);text-decoration:none;font-weight:800;font-size:13px;color:var(--dark)}
+.hero{padding:28px 0 10px}
+.heroCard{position:relative;overflow:hidden;border-radius:28px;padding:31px;background:linear-gradient(135deg,var(--dark),var(--maroon));color:#fff;box-shadow:var(--shadow)}
+.heroCard:after{content:"−8  −4  0  4  8";position:absolute;right:-10px;top:13px;font-size:48px;font-weight:950;opacity:.07;transform:rotate(-6deg);white-space:nowrap}
+.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--goldsoft)}
+h1{font-size:clamp(32px,6vw,50px);line-height:1;margin:8px 0 10px}
+.hero p{max-width:760px;margin:0;color:#fff8ef;line-height:1.55}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.pill{font-size:12px;font-weight:800;padding:8px 11px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08)}
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 0}
+.jump a{text-decoration:none;font-size:12px;font-weight:900;padding:9px 11px;border-radius:999px;background:var(--cream);color:var(--dark);border:1px solid var(--line)}
+.section{padding:18px 0 2px;scroll-margin-top:82px}
+.section h2{margin:0 0 12px;color:var(--dark);font-size:clamp(24px,4vw,31px)}
+.sectionIntro{margin:-4px 0 13px;color:var(--muted);font-size:14px;line-height:1.55}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:19px;box-shadow:0 7px 20px rgba(63,24,36,.07)}
+.card h3{margin:0 0 7px;color:var(--dark);font-size:18px}
+.card p,.card li{color:var(--muted);font-size:14px;line-height:1.55}
+.card p{margin:0}.card ul{margin:8px 0 0;padding-left:20px}.card li+li{margin-top:5px}
+.icon{width:44px;height:44px;border-radius:14px;background:var(--cream);display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.callout{background:linear-gradient(135deg,#fff1c6,var(--ivory));border:1px solid #ead59d;border-radius:20px;padding:20px}
+.callout strong{display:block;color:var(--maroon);font-size:14px;margin-bottom:5px}
+.callout p{margin:0;color:var(--dark);font-size:17px;line-height:1.45;font-weight:750}
+.anchor{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 7px 20px rgba(63,24,36,.07)}
+.anchor+.anchor{margin-top:12px}
+.anchorTop{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.anchorBadge{width:42px;height:42px;border-radius:13px;background:var(--maroon);color:#fff;display:grid;place-items:center;font-weight:950}
+.anchor h3{margin:0;color:var(--dark);font-size:19px}
+.ruleBox{background:var(--ivory);border:1px solid var(--line);border-radius:15px;padding:14px;font-weight:800;color:var(--dark);line-height:1.5}
+.examples{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+.example{background:#fffaf4;border:1px dashed #d7c8b2;border-radius:14px;padding:13px}
+.example b{display:block;color:var(--maroon);font-size:13px;margin-bottom:4px}
+.example span{font-size:14px;color:var(--muted);line-height:1.45}
+.numberline{position:relative;margin:26px 5px 10px;height:64px}
+.line{position:absolute;left:3%;right:3%;top:28px;height:3px;background:var(--dark);border-radius:3px}
+.tick{position:absolute;top:18px;width:2px;height:22px;background:var(--dark)}
+.tick span{position:absolute;top:27px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800;color:var(--muted)}
+.t1{left:6%}.t2{left:17%}.t3{left:28%}.t4{left:39%}.t5{left:50%}.t6{left:61%}.t7{left:72%}.t8{left:83%}.t9{left:94%}
+.zero{background:var(--gold);width:3px}
+.arrowL,.arrowR{position:absolute;top:21px;font-size:20px;color:var(--dark);font-weight:900}
+.arrowL{left:0}.arrowR{right:0}
+.vocab{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.term{background:var(--ivory);border:1px solid var(--line);border-radius:15px;padding:13px}
+.term b{display:block;color:var(--maroon);font-size:14px;margin-bottom:4px}
+.term span{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+.steps{counter-reset:step;display:grid;gap:10px}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 14px 14px 54px}
+.step:before{counter-increment:step;content:counter(step);position:absolute;left:13px;top:12px;width:30px;height:30px;border-radius:10px;background:var(--maroon);color:#fff;display:grid;place-items:center;font-weight:900}
+.step b{display:block;color:var(--dark);font-size:14px;margin-bottom:3px}
+.step span{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+.practiceCheck{display:grid;gap:8px}
+.check{display:flex;gap:10px;align-items:flex-start;background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:12px}
+.box{width:20px;height:20px;border:2px solid var(--gold);border-radius:6px;flex:0 0 20px;margin-top:1px}
+.check span{font-size:14px;line-height:1.45;color:var(--muted)}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 0 40px}.footer b{color:var(--dark)}
+@media(max-width:760px){.grid3,.grid2,.examples,.vocab{grid-template-columns:1fr}.heroCard{padding:24px 20px}.nav{padding:8px 0}.back{white-space:nowrap}}
+</style>
+</head>
+<body>
+<header class="top"><div class="container nav"><a class="brand" href="index.html"><span class="mark">M</span><span>Martin Math Hub</span></a><a class="back" href="index.html#learn">← Back to Hub</a></div></header>
+
+<main>
+<section class="hero"><div class="container"><div class="heroCard">
+  <div class="eyebrow">Topic 2 • 6th Grade Mathematics</div>
+  <h1>Rational Numbers & Integers</h1>
+  <p>Use positive and negative numbers to describe real situations, compare values, reason about distance from zero, and work with points on the coordinate plane.</p>
+  <div class="pills"><span class="pill">Student Notes</span><span class="pill">Anchor Charts</span><span class="pill">Worked Examples</span><span class="pill">Vocabulary</span></div>
+</div>
+<div class="jump">
+  <a href="#big-ideas">Big Ideas</a><a href="#anchor-charts">Anchor Charts</a><a href="#worked-examples">Worked Examples</a><a href="#vocabulary">Vocabulary</a><a href="#check-yourself">Check Yourself</a>
+</div></div></section>
+
+<section class="section" id="big-ideas"><div class="container">
+  <h2>Big Ideas</h2>
+  <p class="sectionIntro">These are the ideas students should be able to explain—not just recognize.</p>
+  <div class="grid3">
+    <div class="card"><div class="icon">➕</div><h3>Signs Have Meaning</h3><p>A positive or negative sign tells direction or position relative to a reference point. Always connect the sign to the situation.</p></div>
+    <div class="card"><div class="icon">0️⃣</div><h3>Zero Is the Reference</h3><p>Zero separates positive and negative values. Its meaning changes with context: sea level, no gain/loss, no debt, and more.</p></div>
+    <div class="card"><div class="icon">↔️</div><h3>Position Shows Value</h3><p>On a number line, values increase as you move right and decrease as you move left.</p></div>
+  </div>
+  <div class="callout" style="margin-top:12px"><strong>THE QUESTION TO ASK</strong><p>“What does this number mean in the situation?”</p></div>
+</div></section>
+
+<section class="section" id="anchor-charts"><div class="container">
+  <h2>Anchor Charts</h2>
+  <p class="sectionIntro">Quick visual reminders for the skills we are using in class.</p>
+
+  <div class="anchor">
+    <div class="anchorTop"><div class="anchorBadge">±</div><h3>Positive vs. Negative Numbers</h3></div>
+    <div class="ruleBox">Positive values are above, greater than, ahead, gained, deposited, or in the positive direction. Negative values are below, less than, behind, lost, withdrawn, or in the opposite direction.</div>
+    <div class="examples">
+      <div class="example"><b>Temperature</b><span>8°F above zero → +8<br>5°F below zero → −5</span></div>
+      <div class="example"><b>Money</b><span>Deposit $20 → +20<br>Owe $12 → −12</span></div>
+      <div class="example"><b>Elevation</b><span>30 ft above sea level → +30<br>15 ft below sea level → −15</span></div>
+      <div class="example"><b>Football</b><span>Gain 7 yards → +7<br>Loss 4 yards → −4</span></div>
+    </div>
+  </div>
+
+  <div class="anchor">
+    <div class="anchorTop"><div class="anchorBadge">↔</div><h3>Comparing Integers on a Number Line</h3></div>
+    <div class="ruleBox">The number farther to the RIGHT is greater. The number farther to the LEFT is less.</div>
+    <div class="numberline" aria-label="Number line from negative 8 to positive 8">
+      <div class="arrowL">‹</div><div class="line"></div><div class="arrowR">›</div>
+      <div class="tick t1"><span>−8</span></div><div class="tick t2"><span>−6</span></div><div class="tick t3"><span>−4</span></div><div class="tick t4"><span>−2</span></div>
+      <div class="tick t5 zero"><span>0</span></div>
+      <div class="tick t6"><span>2</span></div><div class="tick t7"><span>4</span></div><div class="tick t8"><span>6</span></div><div class="tick t9"><span>8</span></div>
+    </div>
+    <div class="examples">
+      <div class="example"><b>Example</b><span>−2 &gt; −7 because −2 is farther right.</span></div>
+      <div class="example"><b>Remember</b><span>Among negative numbers, the value closer to zero is greater.</span></div>
+    </div>
+  </div>
+
+  <div class="anchor">
+    <div class="anchorTop"><div class="anchorBadge">| |</div><h3>Absolute Value</h3></div>
+    <div class="ruleBox">Absolute value is the DISTANCE a number is from zero. Distance is never negative.</div>
+    <div class="examples">
+      <div class="example"><b>|−7| = 7</b><span>−7 is 7 units from zero.</span></div>
+      <div class="example"><b>|5| = 5</b><span>5 is 5 units from zero.</span></div>
+      <div class="example"><b>Compare Distance</b><span>|−12| = 12 and |9| = 9, so −12 is farther from zero.</span></div>
+      <div class="example"><b>Important</b><span>Absolute value tells distance—not which number is greater.</span></div>
+    </div>
+  </div>
+
+  <div class="anchor">
+    <div class="anchorTop"><div class="anchorBadge">xy</div><h3>Coordinate Plane</h3></div>
+    <div class="ruleBox">An ordered pair is written (x, y). Move LEFT/RIGHT for x first, then DOWN/UP for y.</div>
+    <div class="examples">
+      <div class="example"><b>Quadrant I</b><span>(+, +)</span></div>
+      <div class="example"><b>Quadrant II</b><span>(−, +)</span></div>
+      <div class="example"><b>Quadrant III</b><span>(−, −)</span></div>
+      <div class="example"><b>Quadrant IV</b><span>(+, −)</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="worked-examples"><div class="container">
+  <h2>Worked Examples</h2>
+  <p class="sectionIntro">Use these steps when you get stuck. The explanation matters as much as the final symbol or answer.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Example 1: Compare −10 and −3</h3>
+      <div class="steps">
+        <div class="step"><b>Picture the number line.</b><span>−10 is farther left than −3.</span></div>
+        <div class="step"><b>Use the comparison rule.</b><span>The value farther left is less.</span></div>
+        <div class="step"><b>Write the comparison.</b><span><strong>−10 &lt; −3</strong></span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Example 2: Interpret −13 yards</h3>
+      <div class="steps">
+        <div class="step"><b>Identify the reference.</b><span>Zero represents no gain or loss.</span></div>
+        <div class="step"><b>Interpret the sign.</b><span>The negative sign means movement in the losing direction.</span></div>
+        <div class="step"><b>State it in context.</b><span><strong>−13 represents a 13-yard loss.</strong></span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Example 3: Which is farther from zero?</h3>
+      <p>Compare −12 and 9.</p>
+      <div class="steps">
+        <div class="step"><b>Find each absolute value.</b><span>|−12| = 12 and |9| = 9.</span></div>
+        <div class="step"><b>Compare the distances.</b><span>12 is greater than 9.</span></div>
+        <div class="step"><b>Answer the question.</b><span><strong>−12 is farther from zero.</strong></span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Example 4: Reflect across the y-axis</h3>
+      <p>Point A is (4, 3).</p>
+      <div class="steps">
+        <div class="step"><b>Notice what stays the same.</b><span>The y-coordinate stays 3.</span></div>
+        <div class="step"><b>Change the x-coordinate to its opposite.</b><span>4 becomes −4.</span></div>
+        <div class="step"><b>Write the image point.</b><span><strong>(−4, 3)</strong></span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="vocabulary"><div class="container">
+  <h2>Vocabulary</h2>
+  <div class="vocab">
+    <div class="term"><b>Integer</b><span>A whole number, its opposite, or zero. Examples: −4, 0, 9.</span></div>
+    <div class="term"><b>Positive Number</b><span>A number greater than zero.</span></div>
+    <div class="term"><b>Negative Number</b><span>A number less than zero.</span></div>
+    <div class="term"><b>Opposites</b><span>Numbers the same distance from zero on opposite sides, such as −6 and 6.</span></div>
+    <div class="term"><b>Absolute Value</b><span>The distance a number is from zero.</span></div>
+    <div class="term"><b>Rational Number</b><span>A number that can be written as a fraction of two integers, with a nonzero denominator.</span></div>
+    <div class="term"><b>Ordered Pair</b><span>Two coordinates written (x, y) that name a point.</span></div>
+    <div class="term"><b>Quadrant</b><span>One of the four regions formed by the x-axis and y-axis.</span></div>
+  </div>
+</div></section>
+
+<section class="section" id="check-yourself"><div class="container">
+  <h2>Can I Do These Yet?</h2>
+  <div class="card">
+    <div class="practiceCheck">
+      <div class="check"><span class="box"></span><span>I can explain what a positive or negative number means in a real situation.</span></div>
+      <div class="check"><span class="box"></span><span>I can locate and compare positive and negative numbers on a number line.</span></div>
+      <div class="check"><span class="box"></span><span>I can explain absolute value as distance from zero.</span></div>
+      <div class="check"><span class="box"></span><span>I can identify opposites.</span></div>
+      <div class="check"><span class="box"></span><span>I can name quadrants and plot or interpret ordered pairs.</span></div>
+      <div class="check"><span class="box"></span><span>I can explain my answer using words, a model, or both.</span></div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="container"><b>Martin Math Hub</b><br>Topic 2 • Rational Numbers & Integers</div></footer>
+</body>
+</html>
