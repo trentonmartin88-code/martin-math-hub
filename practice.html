@@ -20,14 +20,123 @@ details{margin-top:12px;border:1px solid var(--line);border-radius:15px;backgrou
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.skillCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px}.skillCard h3{margin:0 0 6px;color:var(--dark)}.skillCard p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}.footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 0 40px}.footer b{color:var(--dark)}
 @media(max-width:760px){.grid2,.choices{grid-template-columns:1fr}.heroCard{padding:24px 20px}.nav{padding:8px 0}.back{white-space:nowrap}}
 @media print{.top,.hero,.jump,.controls,#digital,.footer{display:none!important}body{background:#fff}.panel{box-shadow:none;border:0;padding:0}.section{padding:8px 0}.container{width:100%;max-width:none}details{display:none}.question{break-inside:avoid;background:#fff}}
+
+.assessmentPrep{border:2px solid var(--gold)}
+.assessTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.rigorTag{display:inline-flex;padding:6px 9px;border-radius:999px;background:var(--goldsoft);color:var(--dark);font-size:11px;font-weight:950;white-space:nowrap}
+.itemGrid{display:grid;gap:11px}
+.assessItem{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:15px}
+.assessItem .itemHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+.assessItem .itemNo{font-size:12px;font-weight:950;letter-spacing:.8px;text-transform:uppercase;color:var(--maroon)}
+.assessItem p{margin:0 0 8px;color:var(--dark);font-size:14px;line-height:1.5}
+.options{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.option{padding:8px 10px;border:1px solid var(--line);background:#fff;border-radius:10px;font-size:13px;color:var(--muted)}
+.miniTable{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+.miniTable th,.miniTable td{border:1px solid var(--line);padding:7px 9px;text-align:left}.miniTable th{background:var(--cream);color:var(--dark)}
+.constructed{background:#fff9e8;border:2px solid #ead59d}
+.responseBox{height:76px;border:2px dashed #d7c8b2;background:#fff;border-radius:12px;margin-top:9px}
+.resourceLinks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.resourceLink{display:block;text-decoration:none;background:var(--ivory);border:1px solid var(--line);border-radius:15px;padding:14px}
+.resourceLink b{display:block;color:var(--dark);font-size:14px;margin-bottom:4px}.resourceLink span{display:block;color:var(--muted);font-size:12px;line-height:1.4}
+@media(max-width:760px){.options,.resourceLinks{grid-template-columns:1fr}.assessTop{flex-direction:column}}
+@media print{#assessment-prep{display:block!important}.resourceLinks{display:none}}
+
 </style>
 </head>
 <body>
 <header class="top"><div class="container nav"><a class="brand" href="index.html"><span class="mark">M</span><span>Martin Math Hub</span></a><a class="back" href="topic2.html">← Topic 2 Notes</a></div></header>
 <main>
-<section class="hero"><div class="container"><div class="heroCard"><div class="eyebrow">Topic 2 • Practice Center</div><h1>Practice & Review</h1><p>Practice the current skill, stretch your thinking, spiral back to earlier skills, or use the built-in digital self-check.</p></div><div class="jump"><a href="#current">Current Practice</a><a href="#digital">Digital Self-Check</a><a href="#extra">Extra Practice</a><a href="#spiral">Spiral Review</a><a href="videohelp.html">Video Help</a></div></div></section>
+<section class="hero"><div class="container"><div class="heroCard"><div class="eyebrow">Topic 2 • Practice Center</div><h1>Practice & Review</h1><p>Practice the current skill, stretch your thinking, spiral back to earlier skills, or use the built-in digital self-check.</p></div><div class="jump"><a href="#assessment-prep">Assessment Prep</a><a href="#current">Current Practice</a><a href="#digital">Digital Self-Check</a><a href="#extra">Extra Practice</a><a href="#online-practice">Online Practice</a><a href="#spiral">Spiral Review</a><a href="videohelp.html">Video Help</a></div></div></section>
 
-<section class="section" id="current"><div class="container"><h2>Current Topic Practice</h2><p class="intro">Rational numbers, integers, absolute value, and the coordinate plane.</p><div class="panel">
+
+<section class="section" id="assessment-prep"><div class="container">
+  <h2>Topic 2 Assessment Prep</h2>
+  <p class="intro">Original practice built to match the assessment’s skill mix and rigor: mostly foundational DOK 1, several DOK 2 reasoning items, and one DOK 3 multi-step response.</p>
+  <div class="panel assessmentPrep">
+    <div class="assessTop"><div><b style="color:var(--maroon)">Directions:</b><span style="display:block;color:var(--muted);font-size:13px;margin-top:3px">Work without the answer key first. Show reasoning on Items 5, 6, 7B, and 9.</span></div><span class="rigorTag">10 items + multi-part Item 7</span></div>
+
+    <div class="itemGrid">
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">1 • Absolute Value</span></div>
+        <p>The table shows the elevations of four locations. What is the absolute value of Pine Cave’s elevation?</p>
+        <table class="miniTable"><tr><th>Location</th><th>Elevation (ft)</th></tr><tr><td>Lookout</td><td>18</td></tr><tr><td>Pine Cave</td><td>−14</td></tr><tr><td>River Bank</td><td>−3</td></tr><tr><td>Hilltop</td><td>27</td></tr></table>
+        <div class="options"><div class="option">A. −14</div><div class="option">B. 0</div><div class="option">C. 14</div><div class="option">D. 27</div></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">2 • Integers in Context</span></div>
+        <p>A research sensor is 9 meters below sea level. Which integer represents its location?</p>
+        <div class="options"><div class="option">A. −9</div><div class="option">B. 0</div><div class="option">C. 9</div><div class="option">D. 90</div></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">3 • Compare Rational Numbers</span></div>
+        <p>Select <b>all</b> true comparisons.</p>
+        <div class="options"><div class="option">□ −7 &lt; −2</div><div class="option">□ 0 &lt; −4</div><div class="option">□ −0.6 &gt; −0.9</div><div class="option">□ 3/4 &lt; 0.5</div></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">4 • Perimeter from Coordinates</span></div>
+        <p>A rectangle has vertices A(−4, 3), B(2, 3), C(2, −1), and D(−4, −1). What is its perimeter?</p>
+        <div class="options"><div class="option">A. 10 units</div><div class="option">B. 20 units</div><div class="option">C. 24 units</div><div class="option">D. 28 units</div></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">5 • Order & Explain</span></div>
+        <p>Order these values from least to greatest: <b>−0.75, 1/4, −1.2, 0.6</b>. Then explain how a number line supports your order.</p>
+        <div class="responseBox"></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">6 • Coordinate Reasoning</span></div>
+        <p>Point M is at (−5, −2). Name its quadrant and explain how the signs of the coordinates tell you.</p>
+        <div class="responseBox"></div>
+      </div>
+
+      <div class="assessItem constructed">
+        <div class="itemHead"><span class="itemNo">7 • Multi-Part Coordinate Geometry</span><span class="rigorTag">DOK 3 Part B</span></div>
+        <p>A rectangular garden has three vertices at R(−6, 4), S(3, 4), and T(3, −2).</p>
+        <p><b>7A.</b> What are the coordinates of the fourth vertex U?</p>
+        <div class="options"><div class="option">A. (−6, −2)</div><div class="option">B. (6, −2)</div><div class="option">C. (−3, 2)</div><div class="option">D. (3, 2)</div></div>
+        <p style="margin-top:12px"><b>7B.</b> Find the perimeter of the garden. Explain how the coordinates prove the lengths you used.</p>
+        <div class="responseBox"></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">8 • Reflection</span></div>
+        <p>Point P is (−4, 7). Which point is its reflection across the y-axis?</p>
+        <div class="options"><div class="option">A. (4, 7)</div><div class="option">B. (−4, −7)</div><div class="option">C. (7, −4)</div><div class="option">D. (4, −7)</div></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">9 • Reflection Pairs</span></div>
+        <p>Select <b>all</b> pairs that are reflections of each other across an axis. Be ready to name the axis.</p>
+        <div class="options"><div class="option">□ (−5, 2) and (5, 2)</div><div class="option">□ (3, −4) and (3, 4)</div><div class="option">□ (−2, −6) and (2, 6)</div><div class="option">□ (−7, 1) and (−7, −1)</div></div>
+      </div>
+
+      <div class="assessItem">
+        <div class="itemHead"><span class="itemNo">10 • Distance Statements</span></div>
+        <p>Triangle ABC has A(−2, 5), B(−2, −1), and C(4, −1). Mark each statement Yes or No.</p>
+        <table class="miniTable"><tr><th>Statement</th><th>Yes / No</th></tr><tr><td>AB is 6 units long.</td><td>_____</td></tr><tr><td>BC is 6 units long.</td><td>_____</td></tr><tr><td>A and B share the same y-coordinate.</td><td>_____</td></tr><tr><td>B and C share the same y-coordinate.</td><td>_____</td></tr></table>
+      </div>
+    </div>
+
+    <details><summary>Assessment Prep Answer Key</summary><div class="answers">
+      1. C, 14<br>
+      2. A, −9<br>
+      3. −7 &lt; −2 and −0.6 &gt; −0.9<br>
+      4. B, 20 units (width 6, height 4)<br>
+      5. −1.2, −0.75, 1/4, 0.6; values farther left on the number line are less.<br>
+      6. Quadrant III; both coordinates are negative.<br>
+      7A. A, (−6, −2). 7B. Width = 9, height = 6, perimeter = 30 units. R and S share y = 4; S and T share x = 3; the missing vertex must share x = −6 with R and y = −2 with T.<br>
+      8. A, (4, 7)<br>
+      9. Pairs 1, 2, and 4. Pair 1 reflects across the y-axis; pairs 2 and 4 reflect across the x-axis.<br>
+      10. Yes, Yes, No, Yes.
+    </div></details>
+  </div>
+</div></section>
+
+<section class="section" id="current"><div class="container"><h2>Current Topic Practice</h2><p class="intro">Current focus: Lesson 2-5 distance on the coordinate plane and Lesson 2-6 polygons, side lengths, and perimeter.</p><div class="panel">
 <div class="notice"><b>Student directions:</b><p>Show or explain your thinking. Use a number line, words, or another model when it helps.</p></div>
 <div class="qList">
 <div class="question"><div class="qnum">1</div><p>A submarine is 85 feet below sea level. Write an integer to represent its position.</p><div class="answerLine">Answer: <span></span></div></div>
@@ -66,6 +175,14 @@ details{margin-top:12px;border:1px solid var(--line);border-radius:15px;backgrou
 <div class="question"><div class="qnum">4</div><p>Write a real-world situation in which −24 and +24 would represent opposite quantities.</p><div class="answerLine">Answer: <span></span></div></div>
 <div class="question"><div class="qnum">5</div><p>Which is farther from zero: −13.5 or 12.9? Explain using absolute value.</p><div class="answerLine">Answer: <span></span></div></div>
 </div><details><summary>Check possible answers</summary><div class="answers">1. −8.5 and 8.5; each is 8.5 units from zero and they are 17 units apart.<br>2. On a number line −20 is farther left, so −20 &lt; −5.<br>3. Quadrant II.<br>4. Answers vary; for example, $24 deposited and $24 withdrawn.<br>5. −13.5 because |−13.5| = 13.5 and |12.9| = 12.9.</div></details></div></div></section>
+
+
+<section class="section" id="online-practice"><div class="container"><h2>Targeted Online Practice</h2><p class="intro">Optional Khan Academy practice that matches Lessons 2-5 and 2-6.</p>
+<div class="resourceLinks">
+<a class="resourceLink" target="_blank" rel="noopener" href="https://www.khanacademy.org/math/cc-sixth-grade-math/x0267d782%3Acoordinate-plane/x0267d782%3Acc-6th-distance/e/relative-position-on-the-coordinate-plane"><b>↔ Distance Between Points</b><span>Vertical and horizontal distance in all four quadrants.</span></a>
+<a class="resourceLink" target="_blank" rel="noopener" href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-geometry-topic/cc-6th-polygons-in-the-coordinate-plane/e/drawing-polygons"><b>🔷 Draw Polygons with Coordinates</b><span>Plot vertices and create polygons on the coordinate plane.</span></a>
+<a class="resourceLink" target="_blank" rel="noopener" href="https://www.khanacademy.org/math/cc-sixth-grade-math/x0267d782%3Acoordinate-plane/cc-6th-quadrilaterals-on-plane/e/polygons-in-the-coordinate-plane"><b>📐 Quadrilateral Problems</b><span>Use coordinates to find side lengths and reason about quadrilaterals.</span></a>
+</div></div></section>
 
 <section class="section" id="spiral"><div class="container"><h2>Spiral Review</h2><p class="intro">Earlier skills stay in the mix.</p><div class="grid2">
 <div class="skillCard"><h3>Decimal Operations</h3><p>1. 14.6 + 8.75 = ?<br>2. 32.4 − 7.86 = ?<br>3. 4.8 × 2.5 = ?<br>4. 18.9 ÷ 3 = ?</p></div>
