@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#68162f">
+<title>1st 9-Weeks Test Prep | Martin Math Hub</title>
+<style>
+:root{--maroon:#68162f;--dark:#4b0f22;--gold:#d6aa36;--goldsoft:#f4e2ad;--ivory:#fffaf0;--cream:#f7f1e7;--ink:#272124;--muted:#6d6468;--line:#e9dfcf;--good:#1f7a4d;--shadow:0 12px 30px rgba(63,24,36,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 92% 4%,rgba(214,170,54,.15),transparent 24%),linear-gradient(180deg,var(--ivory),#fff 30%,#fff 84%,var(--cream))}
+.container{width:min(1080px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(255,250,240,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--dark)}.mark{width:38px;height:38px;border-radius:12px;background:var(--maroon);color:var(--goldsoft);display:grid;place-items:center}.back{padding:9px 12px;border-radius:999px;background:var(--cream);text-decoration:none;font-weight:800;font-size:13px;color:var(--dark)}
+.hero{padding:28px 0 10px}.heroCard{position:relative;overflow:hidden;border-radius:30px;padding:32px;background:linear-gradient(135deg,var(--dark),var(--maroon));color:#fff;box-shadow:var(--shadow)}.heroCard:after{content:"REVIEW  •  PREP  •  CHECK";position:absolute;right:-40px;top:15px;font-size:42px;font-weight:950;opacity:.06;transform:rotate(-6deg);white-space:nowrap}.eyebrow{font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;color:var(--goldsoft)}h1{font-size:clamp(34px,6vw,52px);line-height:1;margin:8px 0 10px}.hero p{max-width:800px;margin:0;color:#fff8ef;line-height:1.55}.datePill{display:inline-flex;margin-top:15px;padding:8px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.09);font-size:12px;font-weight:900}
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.jump a{text-decoration:none;font-size:12px;font-weight:900;padding:9px 11px;border-radius:999px;background:var(--cream);color:var(--dark);border:1px solid var(--line)}
+.section{padding:18px 0 3px;scroll-margin-top:82px}.section h2{margin:0 0 7px;color:var(--dark);font-size:clamp(24px,4vw,31px)}.intro{margin:0 0 13px;color:var(--muted);font-size:14px;line-height:1.55}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 7px 20px rgba(63,24,36,.07)}.card h3{margin:0 0 7px;color:var(--dark);font-size:18px}.card p,.card li{color:var(--muted);font-size:13px;line-height:1.5}.card p{margin:0}.card ul{margin:7px 0 0;padding-left:18px}.skillIcon{font-size:22px;margin-bottom:8px}.skillTag{font-size:11px;font-weight:950;letter-spacing:.8px;text-transform:uppercase;color:var(--maroon);margin-bottom:4px}
+.strategy{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:14px}.strategy b{display:block;color:var(--dark);font-size:14px;margin-bottom:5px}.strategy span{font-size:13px;color:var(--muted);line-height:1.5}.strategy strong{color:var(--maroon)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.timeCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:19px;box-shadow:0 7px 20px rgba(63,24,36,.07)}.timeCard .when{font-size:11px;font-weight:950;letter-spacing:1px;text-transform:uppercase;color:var(--maroon)}.timeCard h3{margin:5px 0 7px;color:var(--dark)}.timeCard ul{margin:0;padding-left:18px}.timeCard li{font-size:13px;color:var(--muted);line-height:1.5;margin:4px 0}
+.mantra{background:linear-gradient(135deg,#fff1c6,var(--ivory));border:1px solid #ead59d;border-radius:20px;padding:19px}.mantra b{display:block;color:var(--maroon);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}.mantra strong{font-size:21px;color:var(--dark);line-height:1.35}
+.practice{display:grid;gap:10px}.q{background:#fff;border:1px solid var(--line);border-radius:17px;padding:15px}.qHead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:6px}.qNo{font-size:11px;font-weight:950;letter-spacing:.8px;text-transform:uppercase;color:var(--maroon)}.dok{font-size:10px;font-weight:900;padding:5px 8px;border-radius:999px;background:var(--goldsoft);color:var(--dark)}.q p{margin:0 0 7px;color:var(--dark);font-size:14px;line-height:1.48}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.option{background:var(--ivory);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:13px;color:var(--muted)}.response{height:64px;background:var(--ivory);border:2px dashed #d7c8b2;border-radius:12px;margin-top:8px}
+details{margin-top:12px;border:1px solid var(--line);border-radius:15px;background:#fff;padding:0 14px}summary{cursor:pointer;list-style:none;padding:13px 0;font-weight:900;color:var(--maroon)}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;font-size:20px}details[open] summary:after{content:"–"}.answers{padding:0 0 14px;color:var(--muted);font-size:13px;line-height:1.7}.answers b{color:var(--dark)}
+.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.quick div{background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:12px}.quick b{display:block;color:var(--maroon);font-size:13px;margin-bottom:3px}.quick span{font-size:12px;color:var(--muted);line-height:1.45}
+.links{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.btn{display:inline-flex;text-decoration:none;padding:10px 13px;border-radius:12px;background:var(--maroon);color:#fff;font-weight:900;font-size:13px}.btn.alt{background:var(--goldsoft);color:var(--dark)}.footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 0 40px}.footer b{color:var(--dark)}
+@media(max-width:800px){.grid3,.grid2,.timeline,.options,.quick{grid-template-columns:1fr}.heroCard{padding:25px 20px}.nav{padding:8px 0}.back{white-space:nowrap}}
+@media print{.top,.jump,.links,.footer{display:none!important}body{background:#fff}.heroCard,.card,.timeCard,.q{box-shadow:none}.container{width:100%;max-width:none}.q{break-inside:avoid}}
+</style></head><body>
+<header class="top"><div class="container nav"><a class="brand" href="index.html"><span class="mark">M</span><span>Martin Math Hub</span></a><a class="back" href="index.html">← Back to Hub</a></div></header>
+<main>
+<section class="hero"><div class="container"><div class="heroCard"><div class="eyebrow">This Week • Cumulative Review</div><h1>1st 9-Weeks Test Prep</h1><p>Everything we have covered so far, organized into one place. Review the skill, learn how to attack the question, practice, then check your reasoning.</p><span class="datePill">➗ Math Assessment • Monday, September 28</span></div><div class="jump"><a href="#skills">Skills</a><a href="#how-to">How to Answer</a><a href="#quick-reference">Quick Reference</a><a href="#practice">Practice</a><a href="#test-day">Test-Day Plan</a></div></div></section>
+
+<section class="section" id="skills"><div class="container"><h2>What Should I Review?</h2><p class="intro">Focus most on the skills that still require you to stop and think about what to do first.</p>
+<div class="grid3">
+<div class="card"><div class="skillIcon">➗</div><div class="skillTag">Topic 1</div><h3>Whole-Number Division</h3><p>Multi-digit division, quotient and remainder, and interpreting what a remainder means.</p></div>
+<div class="card"><div class="skillIcon">🔢</div><div class="skillTag">Topic 1</div><h3>Decimal Operations</h3><p>Add, subtract, multiply, and divide decimals in computation and multi-step contexts.</p></div>
+<div class="card"><div class="skillIcon">🍕</div><div class="skillTag">Topic 1</div><h3>Fraction Division</h3><p>Divide fractions and mixed numbers, solve word problems, and explain quotient size.</p></div>
+<div class="card"><div class="skillIcon">🧩</div><div class="skillTag">Topic 1</div><h3>Factors & Distributive Property</h3><p>Recognize equivalent factored expressions by finding a common factor or distributing.</p></div>
+<div class="card"><div class="skillIcon">↔️</div><div class="skillTag">Topic 2</div><h3>Integers & Rational Numbers</h3><p>Opposites, absolute value, compare/order, number lines, and interpreting positive/negative values.</p></div>
+<div class="card"><div class="skillIcon">📍</div><div class="skillTag">Topic 2</div><h3>Coordinate Plane</h3><p>Ordered pairs, quadrants, reflections, horizontal/vertical distance, polygons, and perimeter.</p></div>
+</div>
+<div class="links"><a class="btn" href="topic1.html">📘 Topic 1 Notes</a><a class="btn alt" href="topic2.html">📗 Topic 2 Notes</a><a class="btn" href="videohelp.html#benchmark-review">▶️ Review Videos</a></div>
+</div></section>
+
+<section class="section" id="how-to"><div class="container"><h2>How Do I Answer This Kind of Question?</h2><div class="grid2">
+<div class="strategy"><b>Multiple Choice</b><span><strong>Solve before you shop.</strong> Work the problem first when possible, then find your result among the choices. If you are unsure, eliminate choices that cannot make sense.</span></div>
+<div class="strategy"><b>Select All That Apply</b><span>Treat <strong>every option like its own True/False question.</strong> Do not stop after finding one correct answer.</span></div>
+<div class="strategy"><b>Two Blanks / Drop-Downs</b><span>Solve each blank <strong>independently</strong>. The first choice does not automatically tell you the second.</span></div>
+<div class="strategy"><b>Yes / No Table</b><span>Check each row separately. Write a tiny calculation beside every statement before choosing Yes or No.</span></div>
+<div class="strategy"><b>Number Line / Coordinate Grid</b><span>Use the picture as math evidence. On a number line, right is greater. On a coordinate plane, read <strong>x first, y second</strong>.</span></div>
+<div class="strategy"><b>Explain Your Thinking</b><span>Use three parts: <strong>Answer → Evidence → Why.</strong> Give the answer, show the math/model, then explain why that evidence proves it.</span></div>
+<div class="strategy"><b>Multi-Step Word Problem</b><span>Read the final question first. Identify the steps, solve in order, then ask: <strong>Did I answer what was actually asked?</strong></span></div>
+<div class="strategy"><b>When You Get Stuck</b><span>Do not freeze. Mark it, write what you know, eliminate anything impossible, move on, and come back with fresh eyes.</span></div>
+</div></div></section>
+
+<section class="section" id="quick-reference"><div class="container"><h2>Quick Reference</h2><div class="quick">
+<div><b>Absolute Value</b><span>Distance from 0. Distance is nonnegative.</span></div>
+<div><b>Compare Negatives</b><span>The number farther right on the number line is greater.</span></div>
+<div><b>Reflection across y-axis</b><span>Change the sign of x; y stays the same.</span></div>
+<div><b>Reflection across x-axis</b><span>x stays the same; change the sign of y.</span></div>
+<div><b>Horizontal Distance</b><span>Same y-coordinate → compare x-values.</span></div>
+<div><b>Vertical Distance</b><span>Same x-coordinate → compare y-values.</span></div>
+<div><b>Decimal Add/Subtract</b><span>Line up decimal points.</span></div>
+<div><b>Decimal Multiply</b><span>Multiply, then count total decimal places.</span></div>
+<div><b>Decimal Divide</b><span>Make divisor whole; move both decimals equally.</span></div>
+<div><b>Fraction Division</b><span>Convert mixed numbers; keep-change-flip; simplify.</span></div>
+<div><b>Factoring</b><span>Pull out a common factor; distribute to check.</span></div>
+<div><b>Perimeter</b><span>Add all outside side lengths.</span></div>
+</div></div></section>
+
+<section class="section" id="practice"><div class="container"><h2>Benchmark-Style Practice</h2><p class="intro">These are new problems built around the kinds of skills and response formats you have been practicing. Work first; check later.</p><div class="practice">
+
+<div class="q"><div class="qHead"><span class="qNo">1 • Fraction Division</span><span class="dok">DOK 1</span></div><p>How many 2/3-cup servings can be made from 5 1/3 cups?</p><div class="options"><div class="option">A. 3 5/9</div><div class="option">B. 6</div><div class="option">C. 8</div><div class="option">D. 10</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">2 • Fraction Reasoning</span><span class="dok">DOK 2</span></div><p>Without finding the exact quotient first, is 3/4 ÷ 1/5 greater than or less than 3/4? Explain why.</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">3 • Whole-Number Division</span><span class="dok">DOK 1</span></div><p>A library has 2,765 books to place equally on 24 shelves. What is the greatest number of books per shelf, and how many books remain?</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">4 • Decimal Multi-Step</span><span class="dok">DOK 2</span></div><p>Kayla has $40.00. She buys a notebook for $8.75, two pens for $2.35 each, and a calculator for $14.60. How much money remains?</p><div class="options"><div class="option">A. $11.95</div><div class="option">B. $12.25</div><div class="option">C. $14.30</div><div class="option">D. $16.30</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">5 • Decimal Multiplication</span><span class="dok">DOK 1</span></div><p>A worker earns $14.75 per hour and works 9.5 hours. How much does the worker earn?</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">6 • Factoring</span><span class="dok">DOK 1</span></div><p>Which expression is equivalent to 42 + 30?</p><div class="options"><div class="option">A. 6(7 + 5)</div><div class="option">B. 3(14 + 9)</div><div class="option">C. 7(6 + 5)</div><div class="option">D. 10(4 + 3)</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">7 • Absolute Value</span><span class="dok">DOK 1</span></div><p>Choose all expressions equal to |−18|.</p><div class="options"><div class="option">□ 18</div><div class="option">□ −18</div><div class="option">□ |18|</div><div class="option">□ −(−18)</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">8 • Compare Rational Numbers</span><span class="dok">DOK 2</span></div><p>Which statement is true?</p><div class="options"><div class="option">A. −4.8 &gt; −4.2</div><div class="option">B. −0.35 &gt; −0.7</div><div class="option">C. −5/4 &gt; 0</div><div class="option">D. 0.6 &lt; 1/2</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">9 • Opposites & Zero</span><span class="dok">DOK 2</span></div><p>Which situation represents quantities that combine to make 0?</p><div class="options"><div class="option">A. Gain 12 points, then gain 12 more</div><div class="option">B. Deposit $20, then withdraw $20</div><div class="option">C. Fall 8 feet, then fall 8 more</div><div class="option">D. Earn $15, then earn $5</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">10 • Distance from Zero</span><span class="dok">DOK 1</span></div><p>Which value is farthest from zero: 14, −19, −12, or 17?</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">11 • Quadrants</span><span class="dok">DOK 1</span></div><p>Point A is (−6, 4). Point B is 9 units directly below Point A. In which quadrant is Point B?</p><div class="options"><div class="option">A. I</div><div class="option">B. II</div><div class="option">C. III</div><div class="option">D. IV</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">12 • Reflection</span><span class="dok">DOK 1</span></div><p>Point P(−3, 7) is reflected across the y-axis. What are the coordinates of P′?</p><div class="options"><div class="option">A. (3, 7)</div><div class="option">B. (−3, −7)</div><div class="option">C. (7, −3)</div><div class="option">D. (3, −7)</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">13 • Coordinate Distance</span><span class="dok">DOK 2</span></div><p>M(−7, 2) and N(5, 2) are endpoints of a horizontal segment. What is MN, and how do you know which coordinates to use?</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">14 • Rectangle</span><span class="dok">DOK 3</span></div><p>A rectangle has vertices R(−5, 4), S(3, 4), and T(3, −3). Find the missing vertex and the perimeter. Explain how the coordinates prove your answer.</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">15 • Zero in Context</span><span class="dok">DOK 2</span></div><p>A table shows a temperature change of 0°F from 2 p.m. to 3 p.m. What does the 0 most reasonably mean?</p><div class="options"><div class="option">A. The temperature was 0°F.</div><div class="option">B. The temperature did not change.</div><div class="option">C. The thermometer was broken.</div><div class="option">D. The temperature dropped.</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">16 • Yes / No Table</span><span class="dok">DOK 2</span></div><p>For A(−2, 6), B(−2, −1), and C(4, −1), decide whether each statement is true: AB = 7 units; BC = 6 units; A and B share a y-coordinate; B and C share a y-coordinate.</p><div class="response"></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">17 • Select All Reflections</span><span class="dok">DOK 2</span></div><p>Select all pairs that are reflections across either the x-axis or y-axis.</p><div class="options"><div class="option">□ (−4, 2) and (4, 2)</div><div class="option">□ (3, −5) and (3, 5)</div><div class="option">□ (−2, −3) and (2, 3)</div><div class="option">□ (−6, 1) and (−6, −1)</div></div></div>
+
+<div class="q"><div class="qHead"><span class="qNo">18 • Error Analysis</span><span class="dok">DOK 3</span></div><p>A student says −9 &gt; −4 because 9 &gt; 4. Explain the error and write the correct comparison.</p><div class="response"></div></div>
+
+</div>
+<details><summary>Answer Key + How to Think</summary><div class="answers">
+<b>1.</b> C, 8. Convert 5 1/3 to 16/3, then divide by 2/3.<br>
+<b>2.</b> Greater. Dividing by 1/5 asks how many fifths fit into 3/4, so the quotient is larger than the dividend.<br>
+<b>3.</b> 115 R5. Check: 115×24 + 5 = 2,765.<br>
+<b>4.</b> A, $11.95. Add all purchases, then subtract from $40.<br>
+<b>5.</b> $140.125, or $140.13 to the nearest cent.<br>
+<b>6.</b> A. Distribute 6 to check: 42 + 30.<br>
+<b>7.</b> 18, |18|, and −(−18). Test each choice separately.<br>
+<b>8.</b> B. On a number line −0.35 is to the right of −0.7.<br>
+<b>9.</b> B. +20 and −20 are opposites and sum to zero.<br>
+<b>10.</b> −19 because |−19| = 19, the greatest distance listed.<br>
+<b>11.</b> III. B = (−6, −5). Both coordinates are negative.<br>
+<b>12.</b> A, (3, 7). Reflecting across the y-axis changes x only.<br>
+<b>13.</b> 12 units. The y-values match, so use the x-values: |5 − (−7)| = 12.<br>
+<b>14.</b> Missing vertex (−5, −3). Width 8, height 7, perimeter 30 units. Explain using shared x/y coordinates and absolute differences.<br>
+<b>15.</b> B. Zero describes the change, not the temperature itself.<br>
+<b>16.</b> Yes, Yes, No, Yes. Calculate each statement separately.<br>
+<b>17.</b> Pairs 1, 2, and 4. Pair 1 reflects across y; pairs 2 and 4 across x.<br>
+<b>18.</b> −9 is farther left than −4, so −9 &lt; −4. The student compared absolute values instead of signed numbers.
+</div></details>
+</div></section>
+
+<section class="section" id="test-day"><div class="container"><h2>Your Test-Day Plan</h2><div class="timeline">
+<div class="timeCard"><div class="when">The Night Before</div><h3>Prepare, Don't Cram</h3><ul><li>Spend 20–30 focused minutes on the skills you still miss.</li><li>Review your quick-reference rules and 2–3 sample problems.</li><li>Pack what you need for school.</li><li>Go to bed at a reasonable time. A rested brain works better than a midnight cram session.</li></ul></div>
+<div class="timeCard"><div class="when">The Morning Of</div><h3>Start Steady</h3><ul><li>Eat something if you can.</li><li>Arrive prepared and avoid panic-reviewing everything at once.</li><li>Remind yourself of your strongest strategy: read, plan, solve, check.</li><li>If you feel nervous, slow your breathing and focus on one question at a time.</li></ul></div>
+<div class="timeCard"><div class="when">During the Test</div><h3>Use the Whole Test</h3><ul><li>Read directions and identify the question type.</li><li>Estimate before computing when possible.</li><li>Use scratch work; do not try to hold every step in your head.</li><li>Skip and return instead of getting trapped on one item.</li><li>For select-all and tables, test each choice or row separately.</li><li>Before submitting, check that every required response is complete.</li></ul></div>
+</div>
+<div class="mantra" style="margin-top:12px"><b>Remember</b><strong>You do not have to know the whole test at once. You only have to solve the problem in front of you.</strong></div>
+</div></section>
+</main><footer class="footer"><div class="container"><b>Martin Math Hub</b><br>1st 9-Weeks Review & Test Prep</div></footer></body></html>

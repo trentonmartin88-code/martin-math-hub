@@ -18,6 +18,20 @@
 <section class="hero"><div class="container"><div class="heroCard"><div class="kicker">6th Grade Mathematics • S. V. Marshall Middle School</div><h1>Martin Math Hub</h1><p>One easy place for students and families to find what we're learning, class notes, practice, important dates, and extra help.</p><div class="pills"><span class="pill">Mr. Martin</span><span class="pill">ROARing to Success</span><span class="pill" id="todayPill">Family Resource Center</span></div></div></div></section>
 <section class="section"><div class="container"><div class="sectionHead"><h2>This Week in Math</h2><p>Your fastest way to see what matters right now.</p></div><div class="panel week"><div class="weekLabel" id="topicLabel"></div><div class="weekTitle" id="focus"></div><div class="grid3"><div class="mini"><b>🎯 Our Goal</b><span id="goal"></span></div><div class="mini"><b>✏️ Homework / Practice</b><span id="homework"></span></div><div class="mini"><b>📌 Coming Up</b><span id="comingUp"></span></div></div><div class="actions"><a class="btn" data-link="notes">📖 Topic Notes</a><a class="btn alt" data-link="practice">✏️ Practice</a><a class="btn" data-link="calendar">📅 Calendar</a><a class="btn alt" data-link="video">▶️ Video Help</a></div></div><div class="ask"><small>Ask Your Student</small><strong id="askStudent"></strong></div></div></section>
 
+
+<section class="section"><div class="container">
+  <div class="ask">
+    <small>NEW THIS WEEK • TEST PREP CENTER</small>
+    <strong>Review every first-nine-weeks skill, learn how to attack common question types, and practice with benchmark-style questions.</strong>
+    <div class="actions" style="margin-top:14px">
+      <a class="btn" href="review.html">🎯 Open Test Prep Center</a>
+      <a class="btn alt" href="topic1.html">📘 Topic 1 Review</a>
+      <a class="btn" href="topic2.html">📗 Topic 2 Review</a>
+      <a class="btn alt" href="videohelp.html#benchmark-review">▶️ Review Videos</a>
+    </div>
+  </div>
+</div></section>
+
 <section class="section" id="topics-library"><div class="container">
   <div class="sectionHead"><h2>Topics Library</h2><p>Current and previous math topics in one place.</p></div>
   <div class="panel resourcePanel">
@@ -41,16 +55,16 @@
    Leave any unfinished link as "#" and it will say Coming Soon.
    ================================================================ */
 const SITE={
-  topicLabel:"CURRENT FOCUS • TOPIC 2",
-  focus:"Coordinate Plane: Distance & Polygons",
-  goal:"Find horizontal and vertical distances using absolute value, then use coordinates to find side lengths and perimeter of polygons.",
-  homework:"Complete the assigned coordinate-plane homework by your class due date. Check the calendar for details.",
-  comingUp:"Topic 2 Assessment — date TBD. Use the new Assessment Prep in the Practice Center.",
-  askStudent:"If two points share an x- or y-coordinate, how can you use absolute value to find the distance between them?",
+  topicLabel:"THIS WEEK • 1ST 9-WEEKS REVIEW",
+  focus:"Cumulative Review & Test Prep",
+  goal:"Strengthen every skill covered so far: fraction division, whole-number and decimal operations, integer/rational-number reasoning, and coordinate-plane geometry.",
+  homework:"Study Guide Homework issued Sept. 21. B-Day homework is due Sept. 24; A-Day homework is due Sept. 25.",
+  comingUp:"Math 1st 9-Weeks Assessment • Monday, September 28.",
+  askStudent:"Which skill is least automatic for you right now? Show me one problem and talk me through your first step.",
   newsletterDate:"THIS WEEK'S FAMILY UPDATE",
-  newsletterTitle:"We’re finishing Topic 2 with distance, polygons, and coordinate geometry.",
-  newsletterText:"Students are finding horizontal and vertical distances on the coordinate plane, representing polygons, and using coordinates to find side lengths and perimeter. The Practice Center now includes Topic 2 Assessment Prep that matches the skill mix and rigor students will see on the assessment.",
-  links:{notes:"topic2.html",practice:"practice.html#current",calendar:"https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=bc25b8f792d05c9030e241f6837d339e4ea9aefbb098b9981e7174c98ac8b74b%40group.calendar.google.com&color=%2368162f",video:"videohelp.html",syllabus:"syllabus.html",newsletter:"#",extraPractice:"practice.html#extra",spiral:"practice.html#spiral",forms:"practice.html#digital",anchorCharts:"topic2.html#anchor-charts",vocabulary:"topic2.html#vocabulary",models:"topic2.html#worked-examples"}
+  newsletterTitle:"This week is all about review, confidence, and test preparation.",
+  newsletterText:"Students are reviewing all major skills covered during the first nine weeks. The new Test Prep Center includes quick-reference notes, benchmark-style practice, how-to-answer strategies, and a simple plan for the night before, morning of, and during the assessment.",
+  links:{notes:"review.html#skills",practice:"review.html#practice",calendar:"https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&src=bc25b8f792d05c9030e241f6837d339e4ea9aefbb098b9981e7174c98ac8b74b%40group.calendar.google.com&color=%2368162f",video:"videohelp.html#benchmark-review",syllabus:"syllabus.html",newsletter:"#",extraPractice:"practice.html",spiral:"review.html#practice",forms:"review.html#practice",anchorCharts:"review.html#quick-reference",vocabulary:"review.html#quick-reference",models:"review.html#how-to"}
 };
 const $=id=>document.getElementById(id);$("topicLabel").textContent=SITE.topicLabel;$("focus").textContent=SITE.focus;$("goal").textContent=SITE.goal;$("homework").textContent=SITE.homework;$("comingUp").textContent=SITE.comingUp;$("askStudent").textContent=SITE.askStudent;$("newsletterDate").textContent=SITE.newsletterDate;$("newsletterTitle").textContent=SITE.newsletterTitle;$("newsletterText").textContent=SITE.newsletterText;$("todayPill").textContent=new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});
 document.querySelectorAll("[data-link]").forEach(el=>{const url=SITE.links[el.dataset.link];if(!url||url==="#"){el.href="#";el.title="Resource coming soon";el.addEventListener("click",e=>{e.preventDefault();alert("This resource is coming soon.")})}else{el.href=url;el.target="_blank";el.rel="noopener"}});
